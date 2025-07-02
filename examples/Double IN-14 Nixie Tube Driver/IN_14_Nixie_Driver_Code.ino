@@ -66,13 +66,6 @@ void ShiftOutData(byte digit, bool hasDotA = false, bool hasDotB = false) {
   }
 }
 
-void SkipBlankData(){
-  for (int i = 1; i >= 0; i--){
-    digitalWrite(CLK_PIN, 1);
-    digitalWrite(CLK_PIN, 0);  
-  }   
-}
-
 void EndShiftOutData(){
   digitalWrite(EN_PIN, 1);
   digitalWrite(CLK_PIN, 0);    
